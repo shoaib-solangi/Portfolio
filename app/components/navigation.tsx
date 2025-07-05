@@ -76,7 +76,7 @@ export default function Navigation() {
 
   const getCurrentPageInfo = () => {
     const currentPage = navItems.find((item) => item.href === pathname)
-    return currentPage || { label: "Page", description: "Current page" }
+    return currentPage || { label: "Page", description: "Current page", icon: Home }
   }
 
   return (

@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { useToast } from "@/hooks/use-toast"
-import { submitContactForm } from "./actions"
 import {
   Mail,
   Phone,
@@ -22,6 +20,8 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react"
+import { submitContactForm } from "../action"
+import { useToast } from "../components/use.toast"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)

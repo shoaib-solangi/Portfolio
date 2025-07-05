@@ -4,12 +4,14 @@ import type React from "react"
 
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/toaster"
-import Navigation from "@/components/navigation"
 import { AnimatePresence } from "framer-motion"
-import LoadingScreen from "@/components/loading-screen"
-import CursorFollower from "@/components/cursor-follower"
+import { Toaster } from "sonner"
+import CursorFollower from "./components/cursor-follower"
+import Footer from "./components/footer"
+import LoadingScreen from "./components/loading-screen"
+import { ThemeProvider } from "./components/theme-provider"
+import Navigation from "./components/navigation"
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,7 +27,10 @@ export default function ClientLayout({
         <CursorFollower />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={false}>
           <Navigation />
-          <AnimatePresence mode="wait">{children}</AnimatePresence>
+          <main className="min-h-screen">
+            <AnimatePresence mode="wait">{children}</AnimatePresence>
+          </main>
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>

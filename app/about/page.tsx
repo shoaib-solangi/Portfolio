@@ -5,8 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Award, Users, Coffee, Code2, Download } from "lucide-react"
-import Breadcrumb from "@/components/breadcrumb"
-import PageHeader from "@/components/page-header"
+import PageHeader from "../components/page-header"
+import Breadcrumb from "../components/breadcumb"
+
 
 export default function AboutPage() {
   const timeline = [

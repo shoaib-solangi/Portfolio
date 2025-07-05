@@ -8,8 +8,12 @@ import { usePathname } from "next/navigation"
 export default function Breadcrumb() {
   const pathname = usePathname()
   const pathSegments = pathname.split("/").filter(Boolean)
-
-  const breadcrumbItems = [
+type BreadcrumbItem = {
+  label: string;
+  href: string;
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>; // This defines the type of icon as a React component
+};
+  const breadcrumbItems : BreadcrumbItem[] = [
     { label: "Home", href: "/", icon: Home },
     ...pathSegments.map((segment, index) => {
       const href = "/" + pathSegments.slice(0, index + 1).join("/")

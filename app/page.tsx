@@ -20,6 +20,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { useRef } from "react"
+import Breadcrumb from "./components/breadcumb"
+import FloatingElements from "./components/floating-elements"
 
 
 export default function HomePage() {
